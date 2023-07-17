@@ -1,0 +1,28 @@
+.socials {
+    display: flex;
+    flex-direction: row;
+}
+
+.socialsLink {
+    position: relative;
+    flex-direction: row;
+    margin-right: 16px;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: var(--light-grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s;
+    cursor: pointer;
+
+    &:hover {
+        background: var(--white);
+    }
+}
+
+.socialsIcon {
+    width: 25px;
+    height: 25px;
+}

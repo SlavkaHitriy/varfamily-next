@@ -1,0 +1,18 @@
+:root {
+    --white: #fff;
+    --orange: #ea5a24;
+    --orange-dark: #e0501a;
+    --blue: #8fb8df;
+    --grey: #b6c5cd;
+    --grey-dark: #4d4d4d;
+    --black: #000;
+    --light-grey: #f0f3f5;
+    --middle-grey: #949494;
+
+    // Sizes
+    --header-height: 80px;
+
+    @media (max-width: 580px) {
+        --header-height: 60px;
+    }
+}

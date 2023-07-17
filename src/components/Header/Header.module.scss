@@ -1,0 +1,82 @@
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 15px 0;
+    z-index: 10;
+    height: var(--header-height);
+
+    &Fixed {
+        position: fixed;
+        background: var(--white);
+        box-shadow: 0 2px 7px rgba(0 0 0 / 5%);
+        animation: showHeader 0.3s forwards;
+
+        @keyframes showHeader {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &Hide {
+        position: fixed;
+        animation: hideHeader 0.3s forwards;
+        background: var(--white);
+        box-shadow: 0 2px 7px rgba(0 0 0 / 5%);
+
+        @keyframes hideHeader {
+            0% {
+                transform: translateY(0);
+            }
+            99% {
+                transform: translateY(-100%);
+                position: fixed;
+                background: var(--white);
+            }
+            100% {
+                transform: translateY(0);
+                position: absolute;
+                background: unset;
+            }
+        }
+    }
+}
+
+.headerInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.headerMenu {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--black);
+
+    &Active {
+        background: var(--white);
+    }
+}
+
+.menuIcon {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
